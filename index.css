@@ -1,0 +1,115 @@
+/* General Styles */
+html {
+  font-family: 'Barlow Semi Condensed';
+  font-size: 62.5%;
+  background: hsl(210, 46%, 95%);
+  color:  hsl(217, 19%, 35%);
+}
+
+body { margin: 50px; }
+
+p { font-size: 1.3rem; }
+
+
+/* Testimonial Styles */
+
+.testimonial {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 35px;
+}
+
+
+.card {
+  padding: 35px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 40px 20px 50px 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.card1 {
+  grid-column: span 2;
+  background: hsl(263, 55%, 52%) url('./images/bg-pattern-quotation.svg') no-repeat;
+  background-position: 80% 0;
+  background-size: 145px;
+  color: hsl(0, 0%, 100%);
+}
+
+.card2 {
+  background: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card4 {
+  grid-column: span 2;
+  background: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card5 {
+  grid-column: -2;
+  grid-row: 1 / span 2;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-img {
+  border-radius: 50%;
+}
+
+.card-heading * {
+  margin: 0;
+}
+
+.card-heading h2 {
+  margin: 0 0 5px 0;
+}
+
+.card-heading :not(h2) {
+  opacity: 0.5;
+}
+
+.card-body p:not(.lead) {
+  opacity: 0.7;
+  font-size: 1.6rem;
+}
+
+.lead {
+  font-size: 2.6rem;
+  margin: 0 0 20px 0;
+}
+
+
+@media (max-width: 1200px) {
+  .card5 {
+    grid-column: 1 / -1;
+    grid-row: unset;
+  }
+  .testimonial {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 20px;
+  }
+
+  .testimonial {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-column: span 1;
+    padding: 20px;
+  }
+}
