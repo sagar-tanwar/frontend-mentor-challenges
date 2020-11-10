@@ -21,12 +21,17 @@ p { font-size: 1.3rem; }
   gap: 35px;
 }
 
-
 .card {
   padding: 35px;
   background: hsl(0, 0%, 100%);
   border-radius: 10px;
   box-shadow: 40px 20px 50px 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.card > *:last-child,
+.card > *:last-child > *:last-child,
+.card > *:last-child > *:last-child > *:last-child {
+  margin: 0;
 }
 
 .card1 {
