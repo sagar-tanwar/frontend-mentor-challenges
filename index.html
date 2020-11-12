@@ -8,7 +8,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./main.css">
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-  <section class="signup">
+  <section class="container mt-5">
     <header>
       <h1>Learn to code by watching others</h1>
       <p>
@@ -35,14 +36,28 @@
       </p>
     </header>
     <main>
-      <a class="btn btn-cta shadow" href="#0"><b>Try it free 7 days</b> then $20/mo. thereafter</a>
-      <form action="#">
-        <input type="text" name="first_name" placeholder="First Name">
-        <input type="text" name="last_name" placeholder="Last Name">
-        <input type="email" name="password" placeholder="Email Address">
-        <input type="password" name="email" placeholder="Password">
+      <p class="cta shadow rounded-lg"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+      <form id="signup" novalidate action="#" class="shadow rounded-lg" method="post">
+        <div>
+          <span><input type="text" name="first_name" data-name="First Name" placeholder="First Name" required></span>
+          <p></p>
+        </div>
+        <div>
+          <span><input type="text" name="last_name" data-name="Last Name" placeholder="Last Name" required></span>
+          <p></p>
+        </div>
+        <div>
+          <span><input type="email" name="password" data-name="Email Address" placeholder="Email Address"
+              required></span>
+          <p></p>
+        </div>
+        <div>
+          <span><input type="password" name="email" data-name="Password" placeholder="Password" required></span>
+          <p></p>
+        </div>
         <button class="btn btn-success text-uppercase mb-0" type="submit">Claim your free trial</button>
-        <small>By clicking the button, you are agreeing to our <a class="text-red" href="#0"><b>Terms and
+        <small class="text-center">By clicking the button, you are agreeing to our <a class="text-red"
+            href="#0"><b>Terms and
               Services</b></a></small>
       </form>
     </main>

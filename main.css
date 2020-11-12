@@ -1,0 +1,37 @@
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+section {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  html {
+    background-image: url(./images/bg-intro-desktop.png);
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    padding: 35px;
+  }
+
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  section {
+    text-align: left;
+  }
+
+  small {
+    font-size: 1.2rem;
+  }
+}
