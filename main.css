@@ -1,0 +1,54 @@
+.card {
+  max-width: 350px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card__bg-img {
+  width: 100%;
+}
+
+.card__body {
+  padding: 30px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.card__img {
+  border-radius: 50%;
+  margin-top: calc(-108px/2);
+  border: 6px solid var(--white);
+}
+
+.card__name {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.card__age { 
+  color: var(--grey);
+  font-weight: 400;
+}
+
+.card__country {
+  color: var(--grey);
+  font-size: 1.6rem;
+}
+
+.card__footer {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card__info__number {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.card__info__title {
+  font-size: 1.4rem;
+  color: var(--grey)
+}
