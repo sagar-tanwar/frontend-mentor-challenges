@@ -1,0 +1,126 @@
+.box {
+  max-width: 900px;
+  background-color: var(--white);
+  background-image: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
+  background-position: -80px, -570px -290px;
+  background-repeat: no-repeat;
+  /* margin: 20px; */
+  padding: 60px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 35px 24px -20px var(--shadow);
+  position: relative;
+}
+
+.box > *:last-child, 
+.box > *:last-child > *:last-child, 
+.box > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
+.woman-mb {
+  display: none;
+}
+
+.container {
+  margin: 20px 20px 20px 50px;
+}
+
+@keyframes flying-box {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 8px 6px hsla(0, 100%, 0%, 0.7));
+  }
+  
+  50% {
+    filter: drop-shadow(0 10px 8px hsla(0, 100%, 0%, 0.5));
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 8px 6px hsla(0, 100%, 0%, 0.7));
+  }
+}
+
+.accordion {
+  grid-column-start: 2;
+}
+
+.accordion li { border-bottom: 1px solid var(--light-grey); }
+
+.accordion__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--dark-grey);
+}
+
+.accordion__heading:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.accordion__heading p { margin-bottom: 0; }
+
+.accordion__content {
+  display: none;
+  color: var(--grey);
+}
+
+.active .accordion__content {
+  display: block;
+}
+
+.active .accordion__heading {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.active .accordion__heading svg {
+  transform: rotateX(180deg);
+}
+
+@media (max-width: 1000px) {
+  .box {
+    max-width: 320px;
+    min-width: 310px;
+    grid-template-columns: 1fr;
+    padding: 25px;
+    padding-top: 120px;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-position: top center;
+  }
+
+  .at-box {
+    display: none;
+  }
+
+  .accordion h1 {
+    text-align: center;
+  }
+
+  .woman-mb {
+    display: block;
+    position: absolute;
+    top: -20%;
+    left: 4%;
+  }
+
+  .accordion {
+    grid-column: 1;
+  }
+
+  .container {
+    margin: 130px 20px 20px 20px;
+  }
+}
+
+.at-box {
+  position: absolute;
+  top: 40%;
+  left: -10.5%;
+  animation: flying-box 3s infinite;
+}
