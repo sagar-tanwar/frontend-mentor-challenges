@@ -3,7 +3,8 @@ const projects = [
   'profile-card-component',
   'testimonials-grid-section',
   'faq-accordion-card',
-  'social-proof-section'
+  'social-proof-section',
+  'article-preview-component',
 ]
 
 function cardTemplate (project) {
