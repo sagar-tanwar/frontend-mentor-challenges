@@ -5,6 +5,7 @@ const projects = [
   'faq-accordion-card',
   'social-proof-section',
   'article-preview-component',
+  'coding-bootcamp-testimonials-slider',
 ]
 
 function cardTemplate (project) {
