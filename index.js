@@ -6,6 +6,7 @@ const projects = [
   'social-proof-section',
   'article-preview-component',
   'coding-bootcamp-testimonials-slider',
+  'loopstudios-landing-page',
 ]
 
 function cardTemplate (project) {
